@@ -7,7 +7,7 @@ function logUser(u: User) {
 }
 var user = {
 	name: 'cry',
-	age: 12
+	age: 13
 };
 logUser(user);
 
