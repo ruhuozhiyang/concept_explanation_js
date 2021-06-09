@@ -1,4 +1,5 @@
 "use strict";
+exports.__esModule = true;
 function logUser(u) {
     console.log(u.name + ", " + u.age);
 }
@@ -7,7 +8,7 @@ var user = {
     age: 13
 };
 logUser(user);
-var Student = (function () {
+var Student = /** @class */ (function () {
     function Student(name, age, grade, studentId) {
         this.name = name;
         this.age = age;
@@ -41,4 +42,3 @@ function getLength(param) {
 }
 getLength('adsc'); // 4
 getLength(['a', 'b', 'ads']);
- //表明这个文件是个module.
