@@ -12,3 +12,10 @@
 </html>
 <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js">
 </script>
+<script>
+    require(['./amd_module.js'], function(mAlias) {
+        console.log(mAlias.amd_sum(3, 4)); // 7
+        console.log(mAlias.amd_multi(3, 4)); // 12
+        console.log(mAlias.getModuleName()); // amd 模块定义
+    });
+</script>
