@@ -7,19 +7,8 @@
 	<title>Document</title>
 </head>
 <body>
-    
 </body>
 </html>
-<!-- <script type="module">
-    import multi from './test_esm.mjs';
-    console.log(multi(3,4));
-</script> -->
-<script src="https://requirejs.org/docs/release/2.3.6/minified/require.js">
-</script>
-<script>
-    require(['test'], function(test) {
-        console.log('========');
-        console.log(typeof test.sum);
-        console.log(test.sum(3,4));
-    });
+<script src="./commonJsModule.js"> // 导入不了.这是浏览器环境，commonJS是node后端的模块化规范。
+    sum(2,3);
 </script>
