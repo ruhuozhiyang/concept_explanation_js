@@ -5,6 +5,14 @@
 ### 早些时候，JavaScript一直没有模块（module）体系，这导致无法将一个大程序拆分成互相依赖的小文件。其他语言都有这项功能，比如 Ruby 的require、Python 的import，甚至就连 CSS 都有@import，但是 JavaScript 任何这方面的支持都没有，这对开发大型的、复杂的项目形成了巨大障碍。
 ***
 * 在CommonJS/AMD/CMD/ES6出来之前，模块化的实现主要有三种方法，参考**original_module**文件。
+* 但是上面提到的模块化存在以下这些问题：
+> 1、html不但要引入自己需要的js文件，还需要引入js文件需要的js文件。如：a.html需要使用 b.js的代码，而由于b.js中使用了c.js里的代码。所以，在a.html中必须引入b.js和c.js。
+> 这是JavaScript语言先天性的缺陷----js文件没法引入js文件。其它编程语言（java，c#，c/c++）就不存在这个问题。    
+
+> 2、引入js文件的顺序问题以及异步加载问题。
+
+***
+***
 * CommonJS规范是后端NodeJs模块化解决方案。
 * AMD/CMD是浏览器端模块化第三方解决方案。
 
