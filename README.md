@@ -1,1 +1,1 @@
-# typescript_learning
+# some notes when learning JavaScript. it may be some that just i see import or valuable.
