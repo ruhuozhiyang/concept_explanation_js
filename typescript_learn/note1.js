@@ -1,5 +1,4 @@
 "use strict";
-exports.__esModule = true;
 function logUser(u) {
     console.log(u.name + ", " + u.age);
 }
@@ -8,7 +7,8 @@ var user = {
     age: 13
 };
 logUser(user);
-var Student = /** @class */ (function () {
+// ===============Class类声明及使用=================
+var Student = (function () {
     function Student(name, age, grade, studentId) {
         this.name = name;
         this.age = age;
@@ -20,8 +20,9 @@ var Student = /** @class */ (function () {
     };
     return Student;
 }());
-var oneStudent = new Student('cry', 21, '初三', 20164991);
+var oneStudent = new Student('cry', 21, '初三', 243543);
 oneStudent.toString();
+// =============any类型===============
 var name;
 // name = 12; //仍能运行，只是会提示错误
 name = 'cry';
@@ -31,6 +32,7 @@ one = 'minimized';
 console.log(typeof one);
 var objectArray;
 objectArray = [{ name: 'cry' }];
+// ==============参数为复合类型==========
 function getLength(param) {
     if (Array.isArray(param)) {
         console.log('类型为数组');
@@ -41,4 +43,5 @@ function getLength(param) {
     console.log(typeof param + '长度为:' + param.length);
 }
 getLength('adsc'); // 4
-getLength(['a', 'b', 'ads']);
+getLength(['a', 'b', 'ads']); // 3
+//表明这个文件是个module.如果不写，该文件中的变量就是全局变量可能会污染全局。

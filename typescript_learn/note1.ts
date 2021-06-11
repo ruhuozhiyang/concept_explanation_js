@@ -5,11 +5,13 @@ interface User {
 function logUser(u: User) {
   console.log(`${u.name}, ${u.age}`);
 }
-var user = {
+const user = {
 	name: 'cry',
 	age: 13
 };
 logUser(user);
+
+// ===============Class类声明及使用=================
 
 class Student {
 	name: string;
@@ -28,20 +30,16 @@ class Student {
 		console.log('我叫' + this.name + '学号是' + this.studentId + '今年' + this.age + '岁' + '读' + this.grade);
 	}
 }
-var oneStudent = new Student('cry', 21, '初三', 20164991);
+const oneStudent = new Student('cry', 21, '初三', 243543);
 oneStudent.toString();
 
+// =============any类型===============
 let name: any;
 // name = 12; //仍能运行，只是会提示错误
 name = 'cry';
 console.log(name);
 
-
-// type MyBool = true | false;
-// let oneBool : MyBool;
-// oneBool = false;
-// console.log(oneBool);
-
+// ============复合类型声明=================
 type WindowStates = "open" | "closed" | "minimized";
 let one: WindowStates;
 one = 'minimized';
@@ -53,7 +51,7 @@ objectArray = [{name: 'cry'}];
 
 
 
-
+// ==============参数为复合类型==========
 function getLength(param: string | string[]) {
 	if (Array.isArray(param)) {
 		console.log('类型为数组');
@@ -63,6 +61,7 @@ function getLength(param: string | string[]) {
 	console.log(typeof param + '长度为:' + param.length);
 }
 getLength('adsc');// 4
-getLength(['a', 'b', 'ads']);
+getLength(['a', 'b', 'ads']); // 3
 
-export {}; //表明这个文件是个module.
+//表明这个文件是个module.如果不写，该文件中的变量就是全局变量可能会污染全局。
+export {};

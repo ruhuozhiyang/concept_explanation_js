@@ -55,14 +55,15 @@ var Robot = (function (_super) {
     ;
     return Robot;
 }(MerchanicsAction));
-readonly;
-name: string; //只读属性,（除了能在构造函数里面写入值）。
-function excuteReadOnly(onePerson) {
-    // onePerson.name = 'xiaoyi';//报错 不能写入，只能读
-    console.log(onePerson.name); //cry
-}
-var onePerson = { name: 'cry' };
-excuteReadOnly(onePerson);
+// interface Person {
+// 	readonly name: string; //只读属性,（除了能在构造函数里面写入值）。
+// }
+// function excuteReadOnly(onePerson: Person) {
+// 	// onePerson.name = 'xiaoyi';//报错 不能写入，只能读
+// 	console.log(onePerson.name); //cry
+// }
+// let onePerson : Person = { name: 'cry' };
+// excuteReadOnly(onePerson);
 var x = 'hello';
 var y = 'world';
 var oneRobot = new Robot('siri');
