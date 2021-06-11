@@ -4,4 +4,5 @@
 ***
 ***
 * AMD模块的定义 及 模块间依赖 参见文件 *** amd_module.js ***
+* AMD推崇依赖前置
 * 使用RequireJS库函数引入AMD模块文件，参见 *** amd_html_require.html ***
