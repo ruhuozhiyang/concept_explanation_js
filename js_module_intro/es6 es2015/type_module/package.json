@@ -1,0 +1,12 @@
+{
+  "name": "type_module",
+  "version": "1.0.0",
+  "description": "state module by setting package.json file's type field",
+  "scripts": {
+    "start": "node entry.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chenbbay",
+  "license": "ISC",
+  "type": "module"
+}
